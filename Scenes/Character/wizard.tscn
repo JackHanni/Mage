@@ -1,7 +1,7 @@
 [gd_scene load_steps=28 format=4 uid="uid://cnxhgaibwq8wk"]
 
-[ext_resource type="Script" path="res://Scenes/Character/wizard.gd" id="1_72n0f"]
-[ext_resource type="Script" path="res://Scenes/Levels/spring_arm_3d.gd" id="2_8teps"]
+[ext_resource type="Script" uid="uid://cx2iiw366u5k8" path="res://Scenes/Character/wizard.gd" id="1_72n0f"]
+[ext_resource type="Script" uid="uid://bg2o1h0jhlv12" path="res://Scenes/Levels/spring_arm_3d.gd" id="2_8teps"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q6i1w"]
 resource_name = "Material.001"
