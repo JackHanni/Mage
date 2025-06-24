@@ -1,7 +1,7 @@
-extends SpringArm3D
+extends Camera3D
 
-@onready var camera = $Camera3D
-@onready var target = $"../CameraTarget"
+@export var target: Node3D
+var displacement_from_target: Vector3 = Vector3(0.0,10.0,3.0)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -10,4 +10,4 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	camera.look_at(target.global_position)
+	look_at_from_position(target.global_position+displacement_from_target, target.global_position)

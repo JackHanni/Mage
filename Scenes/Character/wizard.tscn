@@ -1,7 +1,6 @@
-[gd_scene load_steps=28 format=4 uid="uid://cnxhgaibwq8wk"]
+[gd_scene load_steps=26 format=4 uid="uid://cnxhgaibwq8wk"]
 
-[ext_resource type="Script" uid="uid://cx2iiw366u5k8" path="res://Scenes/Character/wizard.gd" id="1_72n0f"]
-[ext_resource type="Script" uid="uid://bg2o1h0jhlv12" path="res://Scenes/Levels/spring_arm_3d.gd" id="2_8teps"]
+[ext_resource type="Script" uid="uid://u4nrpf1c3req" path="res://Scenes/Character/wizard.gd" id="1_72n0f"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q6i1w"]
 resource_name = "Material.001"
@@ -887,8 +886,6 @@ blend_shape_mode = 0
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_s5h5e"]
 radius = 0.369396
 height = 1.81777
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_bgin5"]
 
 [node name="Wizard" type="CharacterBody3D"]
 script = ExtResource("1_72n0f")
@@ -2350,15 +2347,3 @@ skin = SubResource("Skin_q1sth")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.904414, 0)
 shape = SubResource("CapsuleShape3D_s5h5e")
-
-[node name="CameraTarget" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.60181, 0)
-
-[node name="SpringArm3D" type="SpringArm3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, 0)
-shape = SubResource("SphereShape3D_bgin5")
-spring_length = 3.0
-script = ExtResource("2_8teps")
-
-[node name="Camera3D" type="Camera3D" parent="SpringArm3D"]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.380644, 4.28741, -1.49563)
