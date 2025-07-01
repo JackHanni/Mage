@@ -10,6 +10,8 @@ const RAY_LENGTH = 1000.0
 
 @export var camera : Camera3D
 
+var target : Vector3
+
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
@@ -46,5 +48,5 @@ func handle_look_direction():
 
 	var result = space_state.intersect_ray(query)
 	if not result.is_empty():
-		var target = Vector3(-result.position.x, position.y, -result.position.z)
+		target = Vector3(result.position.x, position.y, result.position.z)
 		look_at(target, Vector3.UP)

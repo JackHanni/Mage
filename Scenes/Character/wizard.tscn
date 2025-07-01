@@ -902,7 +902,7 @@ mesh = SubResource("ArrayMesh_sk5q7")
 skeleton = NodePath("")
 
 [node name="Armature_200" type="Node3D" parent="."]
-transform = Transform3D(0.199371, 0, 0, 0, 0.199371, 0, 0, 0, 0.199371, 0, 0, 0)
+transform = Transform3D(-0.199371, 0, -1.74296e-08, 0, 0.199371, 0, 1.74296e-08, 0, -0.199371, 0, 0, 0)
 
 [node name="GLTF_created_0" type="Node3D" parent="Armature_200"]
 
