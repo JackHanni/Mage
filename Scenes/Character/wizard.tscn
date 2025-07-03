@@ -1,6 +1,8 @@
-[gd_scene load_steps=26 format=4 uid="uid://cnxhgaibwq8wk"]
+[gd_scene load_steps=28 format=4 uid="uid://cnxhgaibwq8wk"]
 
 [ext_resource type="Script" uid="uid://u4nrpf1c3req" path="res://Scenes/Character/wizard.gd" id="1_72n0f"]
+[ext_resource type="Script" uid="uid://cq5rq7t4xhjwx" path="res://Scenes/Character/projectile_spawner.gd" id="2_oa5uk"]
+[ext_resource type="PackedScene" uid="uid://dwblynty6x8fv" path="res://Scenes/Spells/fire_ball.tscn" id="3_1mmna"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q6i1w"]
 resource_name = "Material.001"
@@ -891,7 +893,7 @@ height = 1.81777
 script = ExtResource("1_72n0f")
 
 [node name="Cube_003_0" type="Node3D" parent="."]
-transform = Transform3D(0.0330606, -0.0484193, -0.0176794, -0.00709764, -0.132291, 0.0173923, 0.0180077, 0.0367518, 0.0393129, -0.293084, 0.903355, 0.0702493)
+transform = Transform3D(-0.0349433, 0.0223566, 0.0176665, 0, -0.134987, 0.0174124, -0.0157042, -0.0497456, -0.0393098, 0.293, 0.903, -0.07)
 
 [node name="Object_4" type="MeshInstance3D" parent="Cube_003_0"]
 mesh = SubResource("ArrayMesh_ieavk")
@@ -2347,3 +2349,7 @@ skin = SubResource("Skin_q1sth")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.904414, 0)
 shape = SubResource("CapsuleShape3D_s5h5e")
+
+[node name="ProjectileSpawner" type="Marker3D" parent="."]
+script = ExtResource("2_oa5uk")
+StartingProjectile = ExtResource("3_1mmna")
