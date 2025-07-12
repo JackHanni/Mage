@@ -1,13 +1,22 @@
-[gd_scene load_steps=5 format=3 uid="uid://ddj3snkevdxak"]
+[gd_scene load_steps=9 format=3 uid="uid://ddj3snkevdxak"]
 
 [ext_resource type="PackedScene" uid="uid://cnxhgaibwq8wk" path="res://Scenes/Character/wizard.tscn" id="1_ixp3o"]
 [ext_resource type="Script" uid="uid://bp637ldxqmtnl" path="res://Scripts/camera_controller.gd" id="2_b07c4"]
+[ext_resource type="PackedScene" uid="uid://drwa10r3yys4u" path="res://Scenes/Entities/deodand.tscn" id="3_2ytpj"]
+[ext_resource type="PackedScene" uid="uid://ctoug3ikl8hkv" path="res://Scenes/Entities/deodand_2.tscn" id="4_db73o"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8mjj7"]
 albedo_color = Color(0.576471, 0.364706, 0.572549, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k2bci"]
 albedo_color = Color(0.454902, 1, 0.376471, 1)
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_b07c4"]
+vertices = PackedVector3Array(-4.5, 0.5, -4.5, -4.5, 0.5, 4.5, 4.5, 0.5, 4.5, 4.5, 0.5, -4.5)
+polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1)]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_b07c4"]
+size = Vector2(10, 10)
 
 [node name="TestLevel" type="Node3D"]
 
@@ -33,3 +42,19 @@ camera = NodePath("../Camera3D")
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.380644, 11.2874, -1.49563)
 script = ExtResource("2_b07c4")
 target = NodePath("../Wizard")
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
+navigation_mesh = SubResource("NavigationMesh_b07c4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D"]
+mesh = SubResource("PlaneMesh_b07c4")
+
+[node name="Deodand" parent="." instance=ExtResource("3_2ytpj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0346, 0.500814, 0)
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="Deodand"]
+
+[node name="deodand2" parent="." instance=ExtResource("4_db73o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.08011, 0.673183, 0)
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="deodand2"]
