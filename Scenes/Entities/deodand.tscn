@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://drwa10r3yys4u"]
+
+[ext_resource type="PackedScene" uid="uid://csjey1s1gvmb" path="res://Assets/deodand.glb" id="1_devhy"]
+[ext_resource type="Script" uid="uid://c133jcleeynjm" path="res://Scenes/Entities/deodand.gd" id="2_6pl3b"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_devhy"]
+
+[node name="Deodand" instance=ExtResource("1_devhy")]
+script = ExtResource("2_6pl3b")
+
+[node name="Mesh" parent="." index="0"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 1.01412, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00687, 0)
+shape = SubResource("CapsuleShape3D_devhy")

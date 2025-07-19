@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dwblynty6x8fv"]
+
+[ext_resource type="PackedScene" uid="uid://dik3ms6xgdcsj" path="res://Assets/low_poly_fireball__boule_de_feu_en_low_poly/scene.gltf" id="1_7kf7c"]
+[ext_resource type="Script" uid="uid://b8t5ou3yuxbfk" path="res://Scenes/Spells/fire_ball.gd" id="2_x6kgp"]
+
+[node name="FireBall" instance=ExtResource("1_7kf7c")]
+script = ExtResource("2_x6kgp")
+
+[node name="Sketchfab_model" parent="." index="0"]
+transform = Transform3D(-6.55671e-09, -0.15, -6.55671e-09, 0, -6.55671e-09, 0.15, -0.15, 6.55671e-09, 2.86603e-16, 0, 0, -0.749233)
