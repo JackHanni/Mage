@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=3 uid="uid://dlvqb5p0aswul"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_smk7d"]
+albedo_color = Color(0.21203968, 0.1354816, 0.013654177, 1)
+
+[node name="TestEnvironment1" type="Node3D"]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
+use_collision = true
+size = Vector3(30, 0.5, 30)
+material = SubResource("StandardMaterial3D_smk7d")
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.44227, 1.3085938, -3.828207)
+use_collision = true
+size = Vector3(1.619, 2.617, 0.5)
+material = SubResource("StandardMaterial3D_smk7d")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.343151, 2, -3.828207)
+operation = 2
+use_collision = true
+size = Vector3(13.307332, 4, 0.4)
+material = SubResource("StandardMaterial3D_smk7d")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.8957672, 2, -9.513334)
+use_collision = true
+size = Vector3(10.9799595, 4, 0.4)
+material = SubResource("StandardMaterial3D_smk7d")

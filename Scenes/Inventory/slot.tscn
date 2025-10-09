@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://db8o3rgif4jmq"]
+
+[ext_resource type="Script" uid="uid://pnyk2wbowtf1" path="res://Scenes/Inventory/slot.gd" id="1_yxolh"]
+
+[node name="Slot" type="TextureRect"]
+custom_minimum_size = Vector2(50, 50)
+expand_mode = 1
+script = ExtResource("1_yxolh")
+
+[node name="StatusFilter" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(1, 1, 1, 0.023529412)

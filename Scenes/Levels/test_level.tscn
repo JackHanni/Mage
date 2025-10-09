@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://ddj3snkevdxak"]
+[gd_scene load_steps=10 format=3 uid="uid://ddj3snkevdxak"]
 
 [ext_resource type="PackedScene" uid="uid://cnxhgaibwq8wk" path="res://Scenes/Character/wizard.tscn" id="1_ixp3o"]
 [ext_resource type="Script" uid="uid://bp637ldxqmtnl" path="res://Scripts/camera_controller.gd" id="2_b07c4"]
 [ext_resource type="PackedScene" uid="uid://drwa10r3yys4u" path="res://Scenes/Entities/deodand.tscn" id="3_2ytpj"]
+[ext_resource type="PackedScene" uid="uid://dwwfg4qd6qvt4" path="res://Scenes/Inventory/inventory.tscn" id="3_npfmg"]
 [ext_resource type="PackedScene" uid="uid://ctoug3ikl8hkv" path="res://Scenes/Entities/deodand_2.tscn" id="4_db73o"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8mjj7"]
@@ -42,6 +43,8 @@ camera = NodePath("../Camera3D")
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.380644, 11.2874, -1.49563)
 script = ExtResource("2_b07c4")
 target = NodePath("../Wizard")
+
+[node name="Inventory" parent="Camera3D" instance=ExtResource("3_npfmg")]
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 navigation_mesh = SubResource("NavigationMesh_b07c4")
